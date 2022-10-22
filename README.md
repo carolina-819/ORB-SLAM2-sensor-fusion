@@ -9,8 +9,10 @@ How to run the algorithm
 1. Clone this repository
 
 2. Create a folder named "Vocabulary" at the root of the cloned repository, download and extract the ORBvoc.txt file at https://github.com/raulmur/ORB_SLAM2/tree/master/Vocabulary into the new folder
+ 
+3. Follow the instructions on 'ORIGINAL ORB-SLAM2 DOCUMENTATION' related to the pre requisites (section 2 only). Install the pre requisites
 
-3. Open a new terminal window and run the following commands in order to build the package
+4. Open a new terminal window and run the following commands in order to build the package
 
    `chmod +x build.sh`
 
@@ -20,10 +22,11 @@ How to run the algorithm
 
    `./build_ros.sh`
 
-4. Go to https://github.com/carolina-819/turtlebot_with_burger_catkin and follow the instructions in that README.md file
+5. Go to https://github.com/carolina-819/turtlebot_with_burger_catkin and follow the instructions in that README.md file
 
 
-
+## Code explanation
+ORB-SLAM2 is divided into four main threads (better explained in https://arxiv.org/pdf/1610.06475.pdf). The sensor fusion algorithm was injected on to the Tracking thread, after ORB features are detected, but before their correspondant points are injected into the map. Look for the UnprojectStereo() function among the project files, that's where the algorithm takes the pixel coordinates of the ORB feature and projects it onto a 3D point to be added to the map. This 3D point is estimated using both the information by the RGB-D camera, and also the information captured by the LiDAR. For more information on how this work was developed please consult https://drive.google.com/file/d/1AkLfSB4wKRcbcFlUFu51ccAzfYqOysgO/view?usp=sharing
 
 
 # ORIGINAL ORB-SLAM2 DOCUMENTATION
