@@ -20,7 +20,7 @@ How to run the algorithm
 
    `./build_ros.sh`
 
-4. Clone the other repository
+4. Go to https://github.com/carolina-819/turtlebot_with_burger_catkin and follow the instructions in that README.md file
 
 
 
