@@ -2,7 +2,7 @@
 
 Código criado no âmbito da dissertação "Sensor Fusion and Mapping of a wheeled Mobile Robot using Vision and LiDAR", de Carolina Marques
 
-Sensor fusion SLAM algorithm between an LDS-01 and a Intel Realsense D435 RGB-D sensor, with support for the Turtlebot3 simulation environments. 
+Sensor fusion SLAM algorithm using an LDS-01 and a Intel Realsense D435 RGB-D sensor, with support for the Turtlebot3 simulation environments. 
 
 How to run the algorithm
 
